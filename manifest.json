@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "携程vbooking抢单助手",
+    "version": "1.0",
+    "description": "自动刷新订单池，自动进行抢单操作",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": ["*://vbooking.ctrip.com/dingzhi/GrabRequire/index*"],
+            "js": ["js/config.js", "js/auto_booking.js"]
+        }
+    ],
+    "permissions": [
+        "notifications",
+        "cookies",
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        "images/*.png",
+        "js/*.js"
+    ]
+}
