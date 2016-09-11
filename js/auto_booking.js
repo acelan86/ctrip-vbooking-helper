@@ -49,7 +49,7 @@ setInterval(function () {
 
 //1s检查一次是否有可以抢单的，这样更快
 setInterval(function () {
-  Array.prototype.slick.call(window, document.querySelectorAll('.tb_ebooking_list tr'), 0).forEach(function (row) {
+  Array.prototype.slice.call(window, document.querySelectorAll('.tb_ebooking_list tr'), 0).forEach(function (row) {
     //有抢单按钮, 点击下抢单按钮
     var id = row.id;
     var qdBtn = row.querySelector('a[name=robRequire]');
